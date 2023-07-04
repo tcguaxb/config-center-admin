@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
 /* Layout */
-import Layout from '@/layout'
+import Layout from '@/pages/layout'
 
 export const constantRoutes = [{
         path: '/login',
@@ -33,7 +32,7 @@ export const constantRoutes = [{
             component: () =>
                 import ('@/pages/application/index'),
             name: 'application',
-            meta: { title: 'application', icon: 'dashboard', affix: true }
+            meta: { title: 'application', icon: 'el-icon-s-platform', affix: true }
         }]
     }
 ]
@@ -44,10 +43,6 @@ export const constantRoutes = [{
  */
 export const asyncRoutes = [
     /** when your routing map is too long, you can split it into small modules **/
-    // componentsRouter,
-    // chartsRouter,
-    // nestedRouter,
-    // tableRouter,
     { path: '*', redirect: '/404', hidden: true }
 ]
 
